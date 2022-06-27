@@ -1,3 +1,39 @@
+# Plotting Our React Blocks (Optional)
+
+Using what we've learned about styles, let's recreate the famous "Plotting your Blocks" assignment from Web Fundamentals this time using React Components.
+
+<img width="739" alt="Screen Shot 2022-06-26 at 11 02 04 PM" src="https://user-images.githubusercontent.com/92617960/175863565-f243e7ab-9485-4035-89a7-63230a2a46ec.png">
+
+We can consider writing something like this where Header, Navigation, Main, SubContents, and Advertisement are all components we will need to import into the App.js and the Main component can display {props.children}.
+
+```
+import React from 'react';
+import './App.css';
+import Header from './Components/Header';
+import Navigation from './Components/Navigation';
+import Main from './Components/Main';
+import SubContents from './Components/SubContents';
+import Advertisement from './Components/Advertisement';
+ 
+                
+function App() {
+  return (
+    <div className="app">
+        <Header />
+        <Navigation />
+        <Main>
+            <SubContents />
+            <SubContents />
+            <SubContents />
+            <Advertisement />
+        </Main>
+    </div>
+  );
+}
+                
+export default
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
